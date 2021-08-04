@@ -1,0 +1,7 @@
+CREATE DATABASE cruetyfreeDB;
+
+CREATE TABLE user(
+
+);
+
+CREATE TABLE
