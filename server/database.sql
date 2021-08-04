@@ -1,4 +1,4 @@
-CREATE DATABASE cruetyfree;
+CREATE DATABASE crueltyfree;
 
 CREATE TABLE user(
 
