@@ -1,4 +1,4 @@
-CREATE DATABASE cruetyfreeDB;
+CREATE DATABASE cruetyfree;
 
 CREATE TABLE user(
 
