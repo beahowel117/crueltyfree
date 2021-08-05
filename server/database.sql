@@ -1,7 +1,0 @@
-CREATE DATABASE cruetyfree;
-
-CREATE TABLE user(
-
-);
-
-CREATE TABLE

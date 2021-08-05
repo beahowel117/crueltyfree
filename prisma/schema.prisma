@@ -9,14 +9,12 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
-<<<<<<< HEAD
-=======
 
 model Product{
   id  Int @id @default(autoincrement())
   name   String
   desc   String
-  price   Int 
+  price   Int
   quantity  Int
   image   String?
 }
@@ -25,4 +23,3 @@ model User{
   id  Int @id @default(autoincrement())
   name   String
 }
->>>>>>> 56402f8cb72eee5ccc8f157eec99a0d54bc7a27a
