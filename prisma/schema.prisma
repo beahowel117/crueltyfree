@@ -1,9 +1,7 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 generator client {
@@ -11,15 +9,16 @@ generator client {
 }
 
 model Product{
-  id  Int @id @default(autoincrement())
-  name   String
-  desc   String
-  price   Int
+  id        Int @id @default(autoincrement())
+  name      String
+  desc      String
+  price     Decimal
   quantity  Int
-  image   String?
+  image     String[]
+  review    Json?
 }
 
-model User{
-  id  Int @id @default(autoincrement())
-  name   String
-}
+// model User{
+//   id      Int @id @default(autoincrement())
+//   name    String
+// }
