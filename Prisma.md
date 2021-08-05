@@ -35,3 +35,4 @@
 ### `db push` vs Prisma Migrate
 - db push and Prisma Migrate both synchronize your Prisma schema and database schema,
 - BUT they play different roles in the development workflow and should not be used interchangeably.
+
