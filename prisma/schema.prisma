@@ -27,16 +27,25 @@ model Category{
 
 model User{
   id            Int       @id @default(autoincrement())
+  username      String    @unique
   firstName     String
   lastName      String
   email         String    @unique
   phone         Int?
-  addressOne    String?   @map("address_one")
-  addressTwo    String?   @map("address_two")
-  city          String?
-  state         String?
-  zip           Int?
   isAdmin       Boolean   @default(false)
+  address       Address?
 
 }
+
+model Address{
+  id            Int      @id @default(autoincrement())
+  user          User     @relation(fields: [userId], references: [id])
+  userId        Int
+  addressOne    String   @map("address_one")
+  addressTwo    String?  @map("address_two")
+  city          String
+  state         String
+  zip           Int
+}
+
 
