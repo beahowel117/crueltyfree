@@ -1,7 +1,0 @@
-CREATE DATABASE crueltyfree;
-
-CREATE TABLE user(
-
-);
-
-CREATE TABLE
