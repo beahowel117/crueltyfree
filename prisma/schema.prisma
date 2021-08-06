@@ -9,16 +9,43 @@ generator client {
 }
 
 model Product{
-  id        Int @id @default(autoincrement())
-  name      String
-  desc      String
-  price     Decimal
-  quantity  Int
-  image     String[]
-  review    Json?
+  id            String       @id @default(cuid())
+  name          String
+  desc          String
+  price         Int
+  quantity      Int
+  images        Bytes[]
+  category      Category?  @relation(fields: [categoryId], references: [id])
+  categoryId    Int
 }
 
-// model User{
-//   id      Int @id @default(autoincrement())
-//   name    String
-// }
+model Category{
+  id            Int       @id @default(autoincrement())
+  categoryType  String    @map("category_type")
+  products      Product[]
+}
+
+model User{
+  id            Int       @id @default(autoincrement())
+  username      String    @unique
+  firstName     String
+  lastName      String
+  email         String    @unique
+  phone         Int?
+  isAdmin       Boolean   @default(false)
+  address       Address?
+
+}
+
+model Address{
+  id            Int      @id @default(autoincrement())
+  user          User     @relation(fields: [userId], references: [id])
+  userId        Int
+  addressOne    String   @map("address_one")
+  addressTwo    String?  @map("address_two")
+  city          String
+  state         String
+  zip           Int
+}
+
+
