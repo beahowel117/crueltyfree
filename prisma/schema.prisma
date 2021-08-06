@@ -47,5 +47,3 @@ model Address{
   state         String
   zip           Int
 }
-
-

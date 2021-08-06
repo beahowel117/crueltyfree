@@ -5,6 +5,7 @@
 // Apply to your local db after schema updates
 - npx prisma migrate dev
 
+- npx prisma migrate reset
 ###
 [Type mapping between PostgreSQL to Prisma schema](https://www.prisma.io/docs/concepts/database-connectors/postgresql#configuring-an-ssl-connection)
 
